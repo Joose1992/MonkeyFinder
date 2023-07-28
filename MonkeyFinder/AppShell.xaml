@@ -4,11 +4,14 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MonkeyFinder"
+    xmlns:view="clr-namespace:MonkeyFinder.Views"
+    Title="Monkeys"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        Shell.NavBarIsVisible="True"
+        Title="Monkeys"
+        ContentTemplate="{DataTemplate view:MainPage}"
         Route="MainPage" />
 
 </Shell>

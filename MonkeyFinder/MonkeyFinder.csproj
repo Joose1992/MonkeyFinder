@@ -55,4 +55,12 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Model\" />
+	  <None Remove="Views\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Model\" />
+	  <Folder Include="Views\" />
+	</ItemGroup>
 </Project>
