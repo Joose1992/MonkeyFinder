@@ -16,12 +16,24 @@ public class BaseViewModel : INotifyPropertyChanged
             if(isBusy == value)
                 return;
             isBusy = value;
-            OnPropertyChanged("IsBusy");
+            OnPropertyChanged();
+        }
+    }
+
+    public string Title
+    {
+        get => title;
+        set
+        {
+            if(title == value)
+                return;
+            title = value;
+            OnPropertyChanged();
         }
     }
     public event PropertyChangedEventHandler PropertyChanged;
 
-    protected virtual void OnPropertyChanged(string Name)
+    protected virtual void OnPropertyChanged([CallerMemberName]string Name = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(Name));
     }
