@@ -1,9 +1,12 @@
-﻿namespace MonkeyFinder.Views;
+﻿using MonkeyFinder.ViewModel;
+
+namespace MonkeyFinder.Views;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
+	public MainPage(MonkeysViewModel viewModel)
 	{
 		InitializeComponent();
+		BindingContext = viewModel;
 	}
 }
